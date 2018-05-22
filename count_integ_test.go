@@ -83,3 +83,19 @@ func TestCountIntegSkipAtTop(t *testing.T) {
 		t.Error("expected 9")
 	}
 }
+
+func TestCountIntegSkipAtTop2(t *testing.T) {
+	if !testing.Short() {
+		counter.SetCount(3)
+		if counter.Count2() != 5 {
+			t.Error("expected 5")
+		}
+		if counter.Count2() != 7 {
+			t.Error("expected 7")
+		}
+
+		if counter.Count2() != 9 {
+			t.Error("expected 9")
+		}
+	}
+}
